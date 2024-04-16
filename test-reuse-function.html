@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>function-reuse-code-test1</title>
+       <style>
+           *{
+               padding:0px;
+               margin:0px;
+           }
+          body{
+              display:flex;
+              background-color:#0003f4dc;
+              align-items:center;
+              justify-content:center;
+              margin-top:10px;
+          }
+          #keyboardform{
+              display:flex;
+              flex-direction:column;
+              border-style:solid;
+              Border-radius:5px;
+              border-color:white;
+              Height:100%;
+              Width:100%;
+              box-shadow:3px 3px 5px #f414b5dc;
+              background-color:#b1f400dc;
+              justify-content:center;
+              align-items:center;
+              row-gap:10px;
+              column-gap:20px;
+          }
+          Input[type="button"]{
+              Background-color:#5cff40;
+              Height:90px;
+              Width:80px;
+              color:#0003f4dc;
+              border:none;
+              font-size:1.5em;
+              Border-radius:25px;
+              cursor:pointer;
+              box-shadow:3px 3px 5px #ff55f1f1;
+             
+             
+          }
+          #box{
+           border:none ; 
+           Height:80px;
+           color:darkblue;
+           background-color:#5cff40;
+           font-size:1.5em;
+           Border-radius:20px;
+          }
+            </style>
+    </head>
+    <body>
+      
+    <div>
+        <form id="keyboardform">
+            <div class="">
+                <input type="text" name="display" id="box">
+            </div>
+            
+            
+            <div>
+            <input type="button" value="c"
+                onclick="
+                    mykeyboard('c')
+                    
+                "
+            >
+            <input type="button" value="÷"
+            onclick="
+                mykeyboard('÷')
+            
+            "
+            >
+            <input type="button" value="*"    
+            onclick="
+                mykeyboard('*')
+            "
+            
+            >
+            <input type="button" value="del"
+            onclick="
+            mykeyboard('del')
+            
+            "
+            >
+            </div>
+            
+            
+              <div>
+            <input type="button" value="9"
+            onclick="
+                mykeyboard('9')
+                
+            "
+            >
+            <input type="button" value="8"
+            onclick="
+                mykeyboard('8')
+                
+            ">
+            <input type="button" value="7"
+            onclick="
+                mykeyboard('7')
+                
+            ">
+            <input type="button" value="-"
+           onclick="
+                mykeyboard('-')
+                
+            " >
+            </div>
+            
+            
+              <div>
+            <input type="button" value="6"
+         onclick="
+                mykeyboard('6')
+                
+            "   
+            >
+            <input type="button" value="5"
+            onclick="
+                mykeyboard('5')
+                
+            "
+            >
+            <input type="button" value="4"
+            onclick="
+                mykeyboard('4')
+                
+            "
+            >
+            <input type="button" value="+"
+            onclick="
+                mykeyboard('+')
+                
+            "
+            >
+            </div>
+            
+              <div>
+            <input type="button" value="3"
+            onclick="
+                mykeyboard('3')
+                
+            "
+            >
+            <input type="button" value="2"
+            onclick="
+                mykeyboard('2')
+                
+            "
+            >
+            <input type="button" value="1"
+            onclick="
+                mykeyboard('1')
+                
+            "
+            >
+            <input type="button" value="."
+            onclick="
+                mykeyboard('.')
+                
+            "
+            >
+            </div>
+            
+              <div>
+            <input type="button" value="%"
+            onclick="
+                mykeyboard('%')
+                
+            "
+            >
+            <input type="button" value="0"
+           onclick="
+                mykeyboard('0')
+                
+            " >
+            <input type="button" value="("
+                onclick="
+                mykeyboard('(') 
+                ">
+            <input type="button" value=")"
+             onclick="
+                 mykeyboard(')')
+             "
+            >
+            </div>
+            
+            <div>
+                <input type="button" value="^"
+            onclick="
+                mykeyboard('^')
+                
+            "    >
+                <input type="button" value="="
+               onclick="
+                mykeyboard('=')
+                
+            " >
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        let keyboard = '';
+        const sum2 = document.getElementById('box').InnerHTML
+        
+        function mykeyboard(key){
+            
+            if(key === 'del'){
+                box.value = box.value.slice(0,-1);
+            }
+            
+            else if(key === 'c'){
+                box.value = '';
+            }
+            else if(key === '÷'){
+                box.value += '/';
+            }
+            
+            else if(key === '='){
+                box.value = eval(box.value);
+            }
+            else if(key === '%'){
+                box.value += '/100'
+            }
+            else if(key === '^'){
+                box.value +='**';
+            }
+            
+            else {
+                box.value += key;
+            }
+        }
+         confirm('create by JBOYCREATOR Copyright 2024')
+     
+         </script>
+    </body>
+</html>
